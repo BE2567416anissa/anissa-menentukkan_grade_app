@@ -1,0 +1,13 @@
+1. Mulai
+2. Dosen menginput nilai mahasiswa dari Nama hingga kehadiran mahasiswa
+3. Jika nilai Keseluruhan matkul DPW >= 80 mendapatkan nilai A
+4. Jika nilai Keseluruhan matkul DPW <= 80 mendapatkan nilai B
+5. Jika nilai Keseluruhan matkul DPW >= 70 mendapatkan nilai C
+6. Jika nilai Keseluruhan matkul DPW < 70 mendapatkan nilai D
+7. Jika nilai Keseluruhan matkul DPW <=50 mendapatkan nilai E
+8. Jika nilai Keseluruhan matkul Alpro >= 80 mendapatkan nilai A
+9. Jika nilai Keseluruhan matkul Alpro <= 80 mendapatkan nilai B
+10. Jika nilai Keseluruhan matkul Alpro >= 70 mendapatkan nilai C
+11. Jika nilai Keseluruhan matkul Alpro < 70 mendapatkan nilai D
+12. Jika nilai Keseluruhan matkul Alpro <= mendapatkan nilai E
+13. Selesai

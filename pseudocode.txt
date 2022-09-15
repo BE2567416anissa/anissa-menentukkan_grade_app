@@ -1,0 +1,84 @@
+Judul : Input Nilai Mahasiswa(Dosen)
+
+Deklarasi
+
+Kamus
+nama : string
+Qdpw, UasDpw, UtsDpw, KeseluruhanDPW, kehadiranDPW : integer
+QAlpro, UasAlpro, UtsAlpro, KeseluruhanALPRO, kehadiranAlpro : integer
+nilaiQuizDpw, nilaiUTSDPW, nilaiUasDpw, TotalKehadiran, KeseluruhanDPW : integer
+nilaiQuizAlpro, nilaiUTSAlpro, nilaiUasAlpro, TotalKehadiran, KeseluruhanALPRO : integer
+
+
+Pseudocode
+
+write("Nama :")
+read(nama)
+write("Nilai Mata Kuliah Desain Pemrograman Web")
+write("Quiz DPW: ")
+read(Qdpw)
+write("UTS DPW")
+read(UtsDpw)
+write("UAS DPW")
+read(UasDpw)
+write("Kehadiran")
+read(kehadiranDPW)
+
+write("Nilai Mata Kuliah Algoritma & Pemrograman")
+write("Quiz Alpro: ")
+read(QAlpro)
+write("UTS Alpro")
+read(UtsAlpro)
+write("UAS Alpro")
+read(UasAlpro)
+write("Kehadiran")
+read(kehadiranAlpro)
+
+Quiz := 20%
+UTS := 30%
+UAS := 40%
+ABSENSI := 10%
+
+write("Hasil Nilai Mata Kuliah Desain Pemrograman Web")
+nilaiQuizDpw = Qdpw * Quiz
+nilaiUTSDPW = UtsDpw * UTS
+nilaiUasDpw = UasDpw * UAS
+TotalKehadiran = kehadiranDPW * ABSENSI
+KeseluruhanDPW = nilaiQuizDpw + nilaiUasDpw + nilaiUTSDPW + TotalKehadiran
+
+if KeseluruhanDPW >= 80 then
+    write("DPW Nilai A")
+else if KeseluruhanDPW <= 80 then
+    write("DPW Nilai B")
+else if KeseluruhanDPW >= 70 then
+    write("DPW Nilai C")
+else if KeseluruhanDPW < 70 then
+    write("DPW Nilai D")
+else if kehadiranDPW <= 50 then
+    write("DPW Nilai E")
+endif
+
+
+
+write("Hasil Nilai Mata Kuliah Algoritma & Pemrograman")
+nilaiQuizAlpro = QAlpro * Quiz
+nilaiUTSAlpro = UtsAlpro * UTS
+nilaiUasAlpro = UasAlpro * UAS
+TotalKehadiran = kehadiranAlpro * ABSENSI
+KeseluruhanALPRO = nilaiQuizAlpro + nilaiUasAlpro + nilaiUTSAlpro + TotalKehadiran
+
+
+if KeseluruhanALPRO >= 80 then
+    write("ALPRO Nilai A")
+else if KeseluruhanALPRO <= 80 then
+    write("ALPRO Nilai B")
+else if KeseluruhanALPRO >= 70 then
+    write("ALPRO Nilai C")
+else if KeseluruhanALPRO < 70 then
+    write("ALPRO Nilai D")
+else if KeseluruhanALPRO <= 50 then
+    write("ALPRO Nilai E")
+endif
+
+
+endprogram

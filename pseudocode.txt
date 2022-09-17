@@ -1,84 +1,62 @@
-Judul : Input Nilai Mahasiswa(Dosen)
+Judul : Grading_App
 
 Deklarasi
 
 Kamus
-nama : string
-Qdpw, UasDpw, UtsDpw, KeseluruhanDPW, kehadiranDPW : integer
-QAlpro, UasAlpro, UtsAlpro, KeseluruhanALPRO, kehadiranAlpro : integer
-nilaiQuizDpw, nilaiUTSDPW, nilaiUasDpw, TotalKehadiran, KeseluruhanDPW : integer
-nilaiQuizAlpro, nilaiUTSAlpro, nilaiUasAlpro, TotalKehadiran, KeseluruhanALPRO : integer
 
+temp                                                       int
+quiz, uts, uas, kehadiran                                  float64
+matkul, mhs                                                string
+NQuiz, NUTS, NUAS, NABSENSI                                float64
+nilaiQuiz, nilaiUTS, nilaiUas, TotalKehadiran, Keseluruhan float64
 
 Pseudocode
 
-write("Nama :")
-read(nama)
-write("Nilai Mata Kuliah Desain Pemrograman Web")
-write("Quiz DPW: ")
-read(Qdpw)
-write("UTS DPW")
-read(UtsDpw)
-write("UAS DPW")
-read(UasDpw)
-write("Kehadiran")
-read(kehadiranDPW)
 
-write("Nilai Mata Kuliah Algoritma & Pemrograman")
-write("Quiz Alpro: ")
-read(QAlpro)
-write("UTS Alpro")
-read(UtsAlpro)
-write("UAS Alpro")
-read(UasAlpro)
-write("Kehadiran")
-read(kehadiranAlpro)
+write("Masukkan banyaknya Mata Kuliah : ")
+read(&temp)
 
-Quiz := 20%
-UTS := 30%
-UAS := 40%
-ABSENSI := 10%
+for i := 0; i < temp; i++ {
+	write("Nama Mahasiswa	: ")
+	read(mhs)
+	write("Nama Matkul	: ")
+	read(matkul)
+	write("Nilai Quiz	: ")
+	read(quiz)
+	write("Nilai UTS	: ")
+	read(uts)
+	write("Nilai UAS	: ")
+	read(uas)
+	write("Kehadiran	: ")
+	read(kehadiran)
 
-write("Hasil Nilai Mata Kuliah Desain Pemrograman Web")
-nilaiQuizDpw = Qdpw * Quiz
-nilaiUTSDPW = UtsDpw * UTS
-nilaiUasDpw = UasDpw * UAS
-TotalKehadiran = kehadiranDPW * ABSENSI
-KeseluruhanDPW = nilaiQuizDpw + nilaiUasDpw + nilaiUTSDPW + TotalKehadiran
+	NQuiz = 0.2
+	NUTS = 0.3
+	NUAS = 0.4
+	NABSENSI = 0.1
 
-if KeseluruhanDPW >= 80 then
-    write("DPW Nilai A")
-else if KeseluruhanDPW <= 80 then
-    write("DPW Nilai B")
-else if KeseluruhanDPW >= 70 then
-    write("DPW Nilai C")
-else if KeseluruhanDPW < 70 then
-    write("DPW Nilai D")
-else if kehadiranDPW <= 50 then
-    write("DPW Nilai E")
-endif
+	nilaiQuiz = quiz * NQuiz
+	nilaiUTS = uts * NUTS
+	nilaiUas = uas * NUAS
+	TotalKehadiran = kehadiran * NABSENSI
+	Keseluruhan = nilaiQuiz + nilaiUas + nilaiUTS + TotalKehadiran
+	write("Keseluruhan :", Keseluruhan)
 
+	if Keseluruhan >= 80 then
+		write("Hasil Nilai Mata Kuliah : Nilai A")
+	else if Keseluruhan >= 70 then
+		write("Hasil Nilai Mata Kuliah : Nilai B")
+	else if Keseluruhan >= 60 then
+		write("Hasil Nilai Mata Kuliah : Nilai C")
+	else if Keseluruhan >= 50 then
+		write("Hasil Nilai Mata Kuliah : Nilai D")
+	else then
+		write("Hasil Nilai Mata Kuliah : Nilai E")
+	endif
 
+endfor
 
-write("Hasil Nilai Mata Kuliah Algoritma & Pemrograman")
-nilaiQuizAlpro = QAlpro * Quiz
-nilaiUTSAlpro = UtsAlpro * UTS
-nilaiUasAlpro = UasAlpro * UAS
-TotalKehadiran = kehadiranAlpro * ABSENSI
-KeseluruhanALPRO = nilaiQuizAlpro + nilaiUasAlpro + nilaiUTSAlpro + TotalKehadiran
-
-
-if KeseluruhanALPRO >= 80 then
-    write("ALPRO Nilai A")
-else if KeseluruhanALPRO <= 80 then
-    write("ALPRO Nilai B")
-else if KeseluruhanALPRO >= 70 then
-    write("ALPRO Nilai C")
-else if KeseluruhanALPRO < 70 then
-    write("ALPRO Nilai D")
-else if KeseluruhanALPRO <= 50 then
-    write("ALPRO Nilai E")
-endif
 
 
 endprogram
+
